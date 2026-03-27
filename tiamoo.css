@@ -1,0 +1,497 @@
+/* ===== BASE ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: #f9c8d4;
+  background-image: url('Marshmallow Pop Heart.gif');
+  background-repeat: repeat;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.page-wrap {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* ===== HEADER ===== */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #e8a0b0;
+  background: #fff;
+  padding: 4px 10px;
+  position: relative;
+  min-height: 110px;
+  border-radius: 4px;
+  overflow: visible;
+}
+
+.site-header h1 {
+  color: #f06090;
+  font-size: 42px;
+  letter-spacing: 2px;
+  text-align: center;
+  flex: 1;
+  font-family: Georgia, serif;
+  -webkit-text-stroke: 1.5px #fff;
+  paint-order: stroke fill;
+  text-shadow:
+    -1px -1px 0 #f3dbe4,
+     2px -2px 0 #f3dbe4,
+    -1px -1px 0 #f3dbe4,
+     2px  2px 0 #f3dbe4;
+}
+
+.header-corner {
+  width: 170px;
+  height: 140px;
+  object-fit: contain;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== DIVIDER I LOVE YOU ===== */
+.divider-iloveyou {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.divider-iloveyou img {
+  width: 100%;
+  height: 26px;
+  object-fit: cover;
+}
+
+/* ===== MAIN GRID ===== */
+.main-grid {
+  display: flex;
+  gap: 12px;
+}
+
+.col-left {
+  flex: 1.1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.col-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ===== BOX BASE con header rosa ===== */
+.box {
+  border: 2px solid #e8a0b0;
+  background: #fff;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Barra superior rosa de cada caja */
+.box-header-bar {
+  background: #f06090;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 5px 8px;
+  flex-shrink: 0;
+}
+
+/* Cuerpo blanco de la caja */
+.box-body {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.box-text {
+  color: #3a6fa8;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* ===== BOX GRANDE IZQUIERDA ===== */
+.box-large {
+  min-height: 300px;
+}
+
+.box-large .box-body {
+  min-height: 240px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 8px;
+  position: relative;
+}
+
+/* gif gatitos: esquina superior izquierda, sobresale un poco */
+.deco-topleft {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 100px;
+  height: 90px;
+  object-fit: contain;
+  z-index: 2;
+}
+
+/* eevee: esquina inferior derecha */
+.deco-bottomright {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 110px;
+  height: 100px;
+  object-fit: contain;
+  z-index: 2;
+}
+
+/* área de texto: con margen izquierdo para no tapar el gif */
+.text-area {
+  margin-left: 90px;
+  margin-top: 10px;
+  margin-right: 10px;
+  flex: 1;
+  align-self: center;
+}
+
+/* ===== FILA INFERIOR (dentro de col-right) ===== */
+.bottom-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 0;
+}
+
+/* Notas: misma altura que sobre-mi, barra normal arriba */
+.box-notas {
+  flex: 2;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.box-notas .box-header-bar {
+  font-size: 16px;
+  padding: 8px;
+  letter-spacing: 2px;
+}
+
+.box-notas .box-body {
+  flex: 1;
+}
+
+/* Gif centro */
+.center-gif-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.foca-gif {
+  width: 130px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Caja imagen: mismo tamaño que links */
+.box-imagen {
+  flex: 0 0 175px;
+  width: 175px;
+  height: 210px;
+  min-height: unset;
+  max-height: 210px;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  position: relative;
+}
+
+.box-imagen .box-body {
+  flex: 1;
+  position: relative;
+  overflow: visible;
+}
+
+.galeria-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 12px 10px 40px;
+  gap: 10px;
+  overflow: visible;
+}
+
+.vinilo-link {
+  display: block;
+  cursor: pointer;
+}
+
+.vinilo-img {
+  width: 130px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.2s;
+}
+
+.vinilo-link:hover .vinilo-img {
+  transform: scale(1.05);
+}
+
+.galeria-text {
+  color: #555;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.5;
+  font-family: Georgia, serif;
+}
+
+/* gato sobresale fuera de la caja abajo a la izquierda */
+.galeria-cat {
+  position: absolute;
+  bottom: 0;
+  left: -15px;
+  width: 190px;
+  height: auto;
+  object-fit: contain;
+  z-index: 5;
+}
+
+.galeria-wrapper {
+  position: relative;
+  flex: 0 0 175px;
+  width: 175px;
+}
+
+/* Caja links: borde normal + marco gif por delante */
+.links-wrapper {
+  position: relative;
+  flex: 0 0 175px;
+  width: 175px;
+  height: 210px;
+}
+
+.box-text-small {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #e8a0b0;
+  border-radius: 6px;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* gif marco encima de todo */
+.links-frame {
+  position: absolute;
+  top: -8px;
+  bottom: -8px;
+  left: -8px;
+  right: -8px;
+  width: calc(100% + 16px);
+  height: calc(100% + 16px);
+  object-fit: fill;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.box-text-small .box-header-bar {
+  position: relative;
+  z-index: 2;
+  border-radius: 4px 4px 0 0;
+}
+
+.box-text-small .box-body {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== EEVEE BOX ===== */
+.box-eevee {
+  height: 195px;
+  overflow: hidden;
+  border: 2px solid #e8a0b0;
+  border-radius: 6px;
+}
+
+.eevee-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== POKEMON DIVIDER ===== */
+.pokemon-divider {
+
+  overflow: hidden;
+  line-height: 0;
+  background: #fde8ef;
+}
+
+.pokemon-divider img {
+  width: 100%;
+  height: 58px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+/* ===== BOX TEXTO DERECHA ARRIBA ===== */
+.box-text-right {
+  min-height: 140px;
+}
+
+.box-text-right .box-body {
+  min-height: 100px;
+  position: relative;
+}
+
+/* gif flor esquina inferior derecha */
+.deco-flower {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+/* ===== FILA INFERIOR DERECHA ===== */
+.bottom-right-row {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+}
+
+.box-dark {
+  flex: 1;
+  min-height: 155px;
+  background: #111;
+  border: 2px solid #e8a0b0;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.dark-gif {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0; left: 0;
+  display: block;
+}
+
+.box-text-small {
+  flex: 1;
+  min-height: 155px;
+}
+
+.box-text-small .box-body {
+  min-height: 100px;
+}
+
+/* ===== DIVIDER BAR (dentro de boxes) ===== */
+.divider-bar {
+  line-height: 0;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.divider-bar img {
+  width: 100%;
+  height: 22px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== CORNER IMAGES / GIFS ===== */
+.corner-gif.top-left-gif {
+  position: absolute;
+  top: 0; left: 0;
+  width: 65px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.corner-img.bottom-right-img {
+  position: absolute;
+  bottom: 4px; right: 4px;
+  width: 70px;
+  height: 65px;
+  object-fit: contain;
+}
+
+.corner-img.top-left-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 60px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.corner-gif.bottom-right-gif {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 120px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.corner-gif.small-gif {
+  width: 42px;
+  height: 38px;
+}
+
+.corner-img.bottom-right-img-sm {
+  position: absolute;
+  bottom: 4px; right: 4px;
+  width: 48px;
+  height: 52px;
+  object-fit: contain;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  border: 2px solid #e8a0b0;
+  border-radius: 6px;
+  background-image: url('bunny3.png');
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: auto 100%;
+  background-color: #fff;
+  min-height: 55px;
+  margin-top: 6px;
+}
+
+.footer-bunny {
+  display: none;
+}
